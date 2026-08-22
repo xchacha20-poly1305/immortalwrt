@@ -220,6 +220,15 @@ define Device/friendlyarm_nanopi-r2s-plus
 endef
 TARGET_DEVICES += friendlyarm_nanopi-r2s-plus
 
+define Device/friendlyarm_nanopi-r28s
+  $(Device/rk3528)
+  DEVICE_VENDOR := FriendlyARM
+  DEVICE_MODEL := NanoPi R28S
+  DEVICE_PACKAGES := kmod-r8169 kmod-aic8800-sdio wpad-openssl \
+	kmod-button-hotplug kmod-input-adc-keys
+endef
+TARGET_DEVICES += friendlyarm_nanopi-r28s
+
 define Device/friendlyarm_nanopi-r3s
   $(Device/rk3566)
   DEVICE_VENDOR := FriendlyARM
