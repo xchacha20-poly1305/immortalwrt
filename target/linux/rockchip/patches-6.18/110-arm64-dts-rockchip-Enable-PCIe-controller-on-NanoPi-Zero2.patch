@@ -10,7 +10,7 @@ Signed-off-by: Jonas Karlman <jonas@kwiboo.se>
 
 --- a/arch/arm64/boot/dts/rockchip/rk3528-nanopi-zero2.dts
 +++ b/arch/arm64/boot/dts/rockchip/rk3528-nanopi-zero2.dts
-@@ -192,6 +192,10 @@
+@@ -45,10 +45,22 @@
  	};
  };
  
@@ -18,11 +18,8 @@ Signed-off-by: Jonas Karlman <jonas@kwiboo.se>
 +	status = "okay";
 +};
 +
- &cpu0 {
- 	cpu-supply = <&vdd_arm>;
- };
-@@ -253,6 +257,14 @@
- 	};
+ &led1 {
+ 	function = LED_FUNCTION_STATUS;
  };
  
 +&pcie {
@@ -34,5 +31,5 @@ Signed-off-by: Jonas Karlman <jonas@kwiboo.se>
 +};
 +
  &pinctrl {
- 	ethernet {
- 		gmac1_rstn_l: gmac1-rstn-l {
+ 	usb {
+ 		usb20_host1_pwren: usb20-host1-pwren {
