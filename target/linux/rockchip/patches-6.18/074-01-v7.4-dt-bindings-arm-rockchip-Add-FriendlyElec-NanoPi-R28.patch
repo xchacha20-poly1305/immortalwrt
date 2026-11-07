@@ -1,0 +1,49 @@
+From bdcf29a379afecc02c3e99c0d1745363ad7a7407 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=E5=AE=89=E5=AE=B9?= <HystericalDragons@proton.me>
+Date: Sat, 19 Sep 2026 18:28:17 +0800
+Subject: [PATCH] dt-bindings: arm: rockchip: Add FriendlyElec NanoPi R28S
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+The NanoPi R28S is a dual gigabit Ethernet router board based on the
+Rockchip RK3528 SoC. It shares its base devicetree with the NanoPi
+Zero2, so fold both boards into a single RK3528 series entry, which
+further RK3528 based NanoPi boards can join without renaming it.
+
+Acked-by: Conor Dooley <conor.dooley@microchip.com>
+Signed-off-by: 安容 <HystericalDragons@proton.me>
+Link: https://patch.msgid.link/20260919-r28s-upstream-v7-1-e80a6f8ef521@proton.me
+Signed-off-by: Heiko Stuebner <heiko@sntech.de>
+---
+ Documentation/devicetree/bindings/arm/rockchip.yaml | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+--- a/Documentation/devicetree/bindings/arm/rockchip.yaml
++++ b/Documentation/devicetree/bindings/arm/rockchip.yaml
+@@ -294,6 +294,13 @@ properties:
+               - friendlyarm,nanopi-r2s-plus
+           - const: rockchip,rk3328
+ 
++      - description: FriendlyElec NanoPi RK3528 series boards
++        items:
++          - enum:
++              - friendlyarm,nanopi-r28s
++              - friendlyarm,nanopi-zero2
++          - const: rockchip,rk3528
++
+       - description: FriendlyElec NanoPi R3S
+         items:
+           - const: friendlyarm,nanopi-r3s
+@@ -330,11 +337,6 @@ properties:
+               - friendlyarm,nanopi-r6s
+           - const: rockchip,rk3588s
+ 
+-      - description: FriendlyElec NanoPi Zero2
+-        items:
+-          - const: friendlyarm,nanopi-zero2
+-          - const: rockchip,rk3528
+-
+       - description: FriendlyElec NanoPC T6 series boards
+         items:
+           - enum:

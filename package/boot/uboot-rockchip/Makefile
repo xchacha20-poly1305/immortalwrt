@@ -207,8 +207,9 @@ endef
 
 define U-Boot/nanopi-zero2-rk3528
   $(U-Boot/rk3528/Default)
-  NAME:=NanoPi Zero2
+  NAME:=NanoPi R28S/Zero2
   BUILD_DEVICES:= \
+    friendlyarm_nanopi-r28s \
     friendlyarm_nanopi-zero2
 endef
 
